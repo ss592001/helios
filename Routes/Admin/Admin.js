@@ -210,14 +210,7 @@ app.post("/uploadImagePdf", upload.single("file"), async (req, res) => {
     const pdfFilePath = path.join(__dirname, '..', '..', 'QAUploads', req.file.filename);
     const outputFolder = path.resolve(__dirname, '..', '..', 'output_images');
     processPDF(pdfFilePath, outputFolder, res);
-app.post('/uploadQAPdf', upload.single('file'), async (req, res, next) => {
-    if (!req.file) {
-        return res.status(400).send('No file uploaded');
-    }
 
-    const pdfFilePath = path.join(__dirname, '..', '..', 'QAUploads', req.file.filename);
-    handleExtractStart(pdfFilePath, res);
-});
 
 });
 
