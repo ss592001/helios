@@ -12,7 +12,7 @@ const MongoDbStore = require('connect-mongodb-session')(Session);
 const mongoose = require('mongoose');
 const AuthRoutes = require('./Routes/Auth/Auth');
 const AdminRoutes=require('./Routes/Admin/Admin')
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 10000;
 const mongoUrl = 'mongodb://sahil1234:sahil1234@ac-9k734zt-shard-00-00.hntpn8l.mongodb.net:27017,ac-9k734zt-shard-00-01.hntpn8l.mongodb.net:27017,ac-9k734zt-shard-00-02.hntpn8l.mongodb.net:27017/?ssl=true&replicaSet=atlas-gvtm46-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0';
 const Store = new MongoDbStore({
    uri: mongoUrl,
