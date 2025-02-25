@@ -51,7 +51,7 @@ app.use('/QAUploads', express.static(path.join(__dirname, 'QAUploads')));
 app.use('/Images', express.static(path.join(__dirname, 'Images')));
 mongoose.connect(mongoUrl)
    .then(result => {
-      app.listen(3008);
+      app.listen(10000);
       console.log("connected to db and terminal at 3008");
    })
 
