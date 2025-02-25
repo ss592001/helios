@@ -9,9 +9,9 @@
 
 FROM node:16
 
-# Install specific poppler version
+# Install poppler-utils without specifying version
 RUN apt-get update && \
-    apt-get install -y poppler-utils=0.86.1-0ubuntu1 && \
+    apt-get install -y poppler-utils && \
     apt-get clean
 
 WORKDIR /app
